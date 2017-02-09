@@ -1,0 +1,20 @@
+<h2>ForeCast for {{city}}</h2>
+
+<div >
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>Date</th>
+      <th>sunrise</th>
+      <th>sunset</th>
+    </tr>
+  </thead>
+  <tbody ng-repeat ="w in weatherResult.forecast.forecastday">
+    <tr>
+      <td>{{w.date | date: 'MMM d yyyy'}}</td>
+      <td>{{w.astro.sunrise}}</td>
+      <td>{{w.astro.sunset}}</td>
+    </tr>    
+  </tbody>
+</table>
+</div>
